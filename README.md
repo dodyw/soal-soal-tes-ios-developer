@@ -24,13 +24,21 @@
   4. viewWillDisappear
   5. viewDidUnload
 
-2. NSUrlConnection synchronous akan berjalan di main-thread, sehingga mengakibatkan GUI tidak responsif. Sedangkan asynchronous akan membuat proses baru di thread baru sehingga tidak mengganggu main-thread dan GUI akan tetap responsif. Yg biasa digunakan bersama progress hud adalah synchronous.
+2. NSUrlConnection:
+  * Synchronous akan berjalan di main-thread, sehingga mengakibatkan GUI tidak responsif. 
+  * Asynchronous akan membuat proses baru di thread baru sehingga tidak mengganggu main-thread dan GUI akan tetap responsif. 
+  * Yg biasa digunakan bersama progress hud adalah synchronous.
 
 3. Cocoapod adalah dependency manager yg digunakan oleh Objective-C. Cara menggunakannya adalah dengan membuat file `Podfile` yg berisi library yg akan digunakan. Selanjutnya masuk ke command-prompt untuk menjalankan `pod install`. Selanjutnya akan berbentuk file `workspace`. Untuk selanjutnya kita menggunakan selalu file workspace ini setiap kali membuka project.
 
-4. NSUserDefaults akan menyimpan data secara permanent ke dalam aplikasi. NSUserDefaults bekerja secara key-value dan tidak membutuhkan database. Data dalam NSUserDefaults akan tersedia selama aplikasi tidak dihapus. Sedangkan CoreData adalah sebuah mekanisme yg digunakan untuk menyimpan data ke dalam database sqlite.
+4. Persistent storage:
+  * NSUserDefaults akan menyimpan data secara permanent ke dalam aplikasi. NSUserDefaults bekerja secara key-value dan tidak membutuhkan database. Data dalam NSUserDefaults akan tersedia selama aplikasi tidak dihapus. 
+  * CoreData adalah sebuah mekanisme yg digunakan untuk menyimpan data ke dalam database sqlite.
 
-5. Apple Store Distribution: aplikasi didistribusikan ke Apple App Store. AdHoc Distribution: Aplikasi didistribusikan secara terbatas untuk beberapa device yg telah didaftarkan sebelumnya. In-House Distribution: Aplikasi didistribusikan secara bebas untuk semua device tanpa perlu diregistrasi sebelumnya, namun hanya boleh digunakan untuk internal perusahaan saja.
+5. Cara pendistribution aplikasi yg disediakan oleh Apple:
+  * Apple Store Distribution: aplikasi didistribusikan ke Apple App Store. 
+  * AdHoc Distribution: Aplikasi didistribusikan secara terbatas untuk beberapa device yg telah didaftarkan sebelumnya. 
+  * In-House Distribution: Aplikasi didistribusikan secara bebas untuk semua device tanpa perlu diregistrasi sebelumnya, namun hanya boleh digunakan untuk internal perusahaan saja.
 
 6. Jawaban bebas :)
 
